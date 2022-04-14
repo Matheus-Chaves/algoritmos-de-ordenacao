@@ -36,10 +36,10 @@ function juntaListas(lista1, lista2) {
     atual++;
   }
 
-  if (posicaoAtualLista1 >= lista1.length) {
+  if (posicaoAtualLista1 === lista1.length) {
     console.log("lista 1 acabou, inserindo lista 2 no array...");
     listaFinal = [...listaFinal, ...lista2.slice(posicaoAtualLista2)];
-  } else if (posicaoAtualLista2 >= lista2.length) {
+  } else if (posicaoAtualLista2 === lista2.length) {
     console.log("lista 2 acabou, inserindo lista 1 no array...");
     listaFinal = [...listaFinal, ...lista1.slice(posicaoAtualLista1)];
   }
