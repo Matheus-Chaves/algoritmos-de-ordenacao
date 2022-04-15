@@ -36,27 +36,12 @@ function juntaListas(lista1, lista2) {
     atual++;
   }
 
-  if (posicaoAtualLista1 === lista1.length) {
-    console.log("lista 1 acabou, inserindo lista 2 no array...");
-    listaFinal = [...listaFinal, ...lista2.slice(posicaoAtualLista2)];
-  } else if (posicaoAtualLista2 === lista2.length) {
-    console.log("lista 2 acabou, inserindo lista 1 no array...");
-    listaFinal = [...listaFinal, ...lista1.slice(posicaoAtualLista1)];
-  }
-
-  // while (posicaoAtualLista1 < lista1.length) {
-  //   listaFinal[atual] = lista1[posicaoAtualLista1];
-  //   posicaoAtualLista1++;
-  //   atual++;
-  // }
-
-  // while (posicaoAtualLista2 < lista2.length) {
-  //   listaFinal[atual] = lista2[posicaoAtualLista2];
-  //   posicaoAtualLista2++;
-  //   atual++;
-  // }
-
-  return listaFinal;
+  //spread operator é melhor para listas pequenas do que concat().
+  return posicaoAtualLista1 === lista1.length
+    ? //lista 1 acabou, inserindo lista 2 no array...
+      [...listaFinal, ...lista2.slice(posicaoAtualLista2)]
+    : //lista 2 acabou, inserindo lista 1 no array...
+      [...listaFinal, ...lista1.slice(posicaoAtualLista1)];
 }
 
 console.log(juntaListas(edGalho, edFolha));
