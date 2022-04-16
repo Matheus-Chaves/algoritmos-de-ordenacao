@@ -1,5 +1,4 @@
 /*
-  [ALURA] - Curso de Algoritmos II
   * Exercício:
     - Duas listas já ordenadas estão no arquivo arrays.js e é necessário
     criar uma só lista que junte as duas e as ordene em ordem crescente
